@@ -22,6 +22,8 @@ const binSearch = (input:string, max:number):number => {
   return low;
 };
 
+const quickId = (pass:string) => parseInt(pass.replace(/F|L/g, '0').replace(/B|R/g, '1'), 2)
+
 const seatIds = (input:string) => input.split('\n')
   .map(boardingPass => {
     const rowSearch = boardingPass.substr(0, 7);

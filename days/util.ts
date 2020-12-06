@@ -2,6 +2,7 @@ import { count } from 'console';
 import Graph from 'graphology';
 import {bfsFromNode} from 'graphology-traversal'
 
+export const bitAnd = (prev: number, cur: number) => prev & cur;
 export const sum = (prev: number, cur: number) => prev + cur;
 export const multiply = (prev: number, cur: number) => prev * cur;
 export const allTrue = (prev: boolean, cur:boolean) => prev && cur;
