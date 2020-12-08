@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import { bitAnd, sum } from '../util';
+import { bitAnd, sum } from '../util/arrayUtils';
 
 const part1 = (input:string) => {
   const count = input.split(/\s\s/g)

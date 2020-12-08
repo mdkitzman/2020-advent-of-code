@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import { sum, multiply } from '../util';
+import { sum, multiply } from '../util/arrayUtils';
 
 const treeCount = (input:string, slope:{x:number,y:number}):number => {
   return input.split('\n')

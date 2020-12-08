@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import { difference } from 'lodash';
-import { allTrue } from '../util';
+import { allTrue } from '../util/arrayUtils';
 
 const reqFields = ['byr','iyr','eyr','hgt','hcl','ecl','pid'];
 const inRange = (min:number, max:number) => (val:number):boolean => min <= val && val <= max;

@@ -1,0 +1,1 @@
+export const leftpad = (str:string, num:number) => ("0".repeat(num) + str).substr(-num);

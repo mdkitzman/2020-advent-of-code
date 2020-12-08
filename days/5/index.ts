@@ -1,7 +1,7 @@
 import { assert } from 'console';
 import { promises as fs } from 'fs';
 import { difference } from 'lodash';
-import { max } from '../util';
+import { max } from '../util/arrayUtils';
 
 const binSearch = (input:string, max:number):number => {
   let [low, high] = [0, max];

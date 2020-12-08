@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import { sum } from '../util';
+import { sum } from '../util/arrayUtils';
 
 const getConfigs = (input:string) => {
   const splitter = /([0-9]+)-([0-9]+) ([a-z]): (.+)/;
