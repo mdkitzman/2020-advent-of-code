@@ -20,16 +20,17 @@
 		"scope": "typescript",
 		"prefix": "aoc",
 		"body": ["import { promises as fs } from 'fs';\n",
-			"const part1 = (input) => {",
+			"const part1 = (input:string) => {",
 			"\tconsole.log(`Part 1 : `);",
 			"};\n",
-			"const part2 = (input) => {",
+			"const part2 = (input:string) => {",
 			"\tconsole.log(`Part 2 : `)",
 			"}\n",
 			"(async () => {",
-			"\tconst allInput = await fs.readFile('./days/8/input', { encoding: 'utf-8'});\n",
-			"\tpart1(allInput);",
-			"\tpart2(allInput);",
+			"\tconst allInput = await fs.readFile('./days/$1/input', { encoding: 'utf-8'});",
+			"\tconst test = await fs.readFile('./days/$1/test', { encoding: 'utf-8'});\n",
+			"\tpart1(test);",
+			"\tpart2(test);",
 			"})();"
 		]
 	}
