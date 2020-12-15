@@ -30,6 +30,36 @@ const part1 = (input:string) => {
 };
 
 const part2 = (input:string) => {
+  let mask:string[] = [];
+  let memory:{[k:number]:number} = {};
+  const memInstRegex = /mem\[(\d+)\] = (\d+)/;
+
+  input.split('\n')
+    .forEach(instruction => {
+      if(instruction.startsWith('mask')) {
+        mask = instruction.split(' = ')[1].split('');
+      } else {
+        const [_, memIndexStr, addrStr] = memInstRegex.exec(instruction) || [];
+        const memIndex = parseInt(memIndexStr, 10);
+        
+        const strValueBin = leftpad(memIndex.toString(2), 36)
+          .split('')
+          .map((iVal, index) => {
+            switch (mask[index]) {
+              case '0': return iVal;
+              default: return mask[index];
+            }
+          });
+        const numXs = strValueBin
+
+        const addr = parseInt(addrStr, 10);
+        memory[memIndex] = parseInt(strValueBin, 2);
+      }
+    });
+  
+  const total = Object.values(memory).reduce(sum, 0);
+
+
   console.log(`Part 2 : `)
 }
 
