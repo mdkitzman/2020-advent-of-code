@@ -1,5 +1,6 @@
 import { leftpad } from "./stringUtils";
 
+export const inRange = (min:number, max:number) => (val:number):boolean => min <= val && val <= max;
 export const dec2bin = (dec:number, byteSize = 8):string => leftpad((dec >>> 0).toString(2), byteSize);
 
 export const lcmRecurse = (input:number[]):number => {
