@@ -37,7 +37,7 @@ export class ConwaySpace {
   cycle(mapper:(neighborCount:number, isActive:boolean)=>boolean) {
     // Look at each active "point", get the points around each one
     // and determine if that point needs to be updated.
-    const origin = "0".repeat(this.dimension).split("").map(v => parseInt(v, 10));
+    const origin = Array(this.dimension).fill(0);
     const pointsToConsider = new Set<string>();
     for(const str of this.data) {
       const point = this.unKey(str);
